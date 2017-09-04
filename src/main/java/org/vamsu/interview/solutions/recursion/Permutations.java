@@ -7,7 +7,7 @@ import java.util.Arrays;
  */
 public class Permutations {
     static void printPermute(String input) {
-        printPermute(input.toCharArray(), 0, input.length(),"");
+        printPermute(input.toCharArray(), 0, input.length(), "");
     }
 
     static void printPermute(char[] input, int start, int end, String out) {
@@ -15,12 +15,37 @@ public class Permutations {
             System.out.println(Arrays.toString(input));
             return;
         } else {
-            System.out.println(out + start + " " + Arrays.toString(input));
+            //System.out.println(out + start + " " + Arrays.toString(input));
         }
         for (int i = start; i < end; i++) {
             swap(input, start, i);
             printPermute(input, start + 1, end, out + "-->");
             swap(input, start, i);
+        }
+    }
+
+    static void allPermute(char[] input, char[] res, int index) {
+        if (index >= res.length) {
+            System.out.println(new String(res));
+            return;
+        }
+        for (int i = 0; i < input.length; i++) {
+            res[index] = input[i];
+            allPermute(input, res, index + 1);
+        }
+    }
+
+    static void permute(char[] input, char[] res, int index) {
+        if (index <= 0) {
+            System.out.println(new String(res));
+            return;
+        }
+        for (int i = 0; i < input.length; i++) {
+            if (res[i] == '?') {
+                res[i] = input[index - 1];
+                permute(input, res, index - 1);
+                res[i] = '?';
+            }
         }
     }
 
@@ -32,6 +57,9 @@ public class Permutations {
     }
 
     public static void main(String[] args) {
-        printPermute("abc");
+        //printPermute("abcd");
+        //allPermute("abcd".toCharArray(), new char[4], 0);
+        char[] res = {'?', '?', '?', '?'};
+        permute("abcd".toCharArray(), res, 4);
     }
 }

@@ -8,7 +8,7 @@ import java.util.Arrays;
 public class NLengthStrings {
 
     static void printNLength(char[] input, int n, char[] out, String pout) {
-        System.out.println(pout + n + Arrays.toString(out));
+        //System.out.println(pout + n + Arrays.toString(out));
         if (n <= 0) {
             System.out.println(out);
             return;
@@ -20,7 +20,7 @@ public class NLengthStrings {
     }
 
     public static void main(String[] args) {
-        String input = "AB";
+        String input = "123";
         printNLength(input.toCharArray(), 2, new char[2], "");
     }
 }

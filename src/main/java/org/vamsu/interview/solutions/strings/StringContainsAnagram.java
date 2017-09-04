@@ -74,7 +74,7 @@ public class StringContainsAnagram {
         List<Long> primes = new ArrayList<>();
         for (int i = 2; primes.size() < count; i++) {
             int counter = 0;
-            for (int j = 1; j <= i / 2; j++) {
+            for (int j = 1; j <= Math.sqrt(i); j++) {
                 if (i % j == 0) {
                     counter++;
                 }
@@ -94,6 +94,5 @@ public class StringContainsAnagram {
         System.out.println(solution.hasAnagram("coding interviex questions", "oding"));
         System.out.println(solution.hasAnagram("interview", "coding interview questions"));
         System.out.println(solution.hasAnagram("", ""));
-        System.out.println(solution.hasAnagram(null, ""));
     }
 }

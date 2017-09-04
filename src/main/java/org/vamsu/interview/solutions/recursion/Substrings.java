@@ -5,9 +5,9 @@ package org.vamsu.interview.solutions.recursion;
  */
 public class Substrings {
     static void print(String input) {
-        for (int c = 0; c < input.length(); c++) {
-            for (int i = 1; i <= input.length() - c; i++) {
-                System.out.println(input.substring(c, c + i));
+        for (int i = 0; i < input.length(); i++) {
+            for (int j = 1; j < input.length() - i; j++) {
+                System.out.println(input.substring(i, i + j));
             }
         }
     }

@@ -7,7 +7,7 @@ import java.util.Arrays;
  */
 public class NLengthNumber {
     static void printNLength(int k, int n, int[] out, String op) {
-        System.out.println(op + "n=" + n);
+        //System.out.println(op + "n=" + n);
         if (n <= 0) {
             System.out.println(Arrays.toString(out));
             return;
