@@ -34,7 +34,7 @@ public class LengthOfReapeatedSubsequence {
     public static void main(String[] args) {
         String a = "ATACTCGGA";
         String b = "ATACTCGGA";
-        //System.out.println(maxLRS(a, b, a.length(), b.length()));
+        System.out.println(maxLRS(a, b, a.length(), b.length()));
         System.out.println(maxLRSDP(a, b));
     }
 }

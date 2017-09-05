@@ -26,7 +26,7 @@ public class MakeChange {
         ways[0] = 1;
 
         for (int coin : coins) {
-            for (int amount = 0; amount <= money; amount++) {
+            for (int amount = 1; amount <= money; amount++) {
                 if (amount >= coin) {
                     ways[amount] += ways[amount - coin];
                 }

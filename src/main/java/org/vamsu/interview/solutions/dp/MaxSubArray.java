@@ -24,7 +24,7 @@ public class MaxSubArray {
     }
 
     public static void main(String[] args) {
-        int arrA[] = {1, 2, -3, -4, 2, 17, -2, 3, -1, -10};
+        int arrA[] = {1, 2, -3, -4, 2, 17, -2, 3, -1, -10, -10, 19};
         System.out.println(solve(arrA));
     }
 }

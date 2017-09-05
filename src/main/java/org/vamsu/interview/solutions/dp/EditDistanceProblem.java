@@ -1,4 +1,4 @@
-package org.vamsu.interview.solutions.strings;
+package org.vamsu.interview.solutions.dp;
 
 /**
  * Created by vamsu on 8/2/17.

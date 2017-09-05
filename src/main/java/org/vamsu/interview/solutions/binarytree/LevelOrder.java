@@ -56,6 +56,6 @@ public class LevelOrder {
         Node<Integer> root = ArrayToBTree.toTree(arr);
         BTreePrinter.printNode(root);
         System.out.println("LevelOrder recursive: " + Arrays.toString(levelOrder(root).toArray()));
-        System.out.println("LevelOrder recursive: " + Arrays.toString(levelOrderIR(root).toArray()));
+        System.out.println("LevelOrder iterative: " + Arrays.toString(levelOrderIR(root).toArray()));
     }
 }

@@ -42,7 +42,7 @@ public class NonConsecutive1 {
 
     static void generate(int n, int[] result, String out) {
         out += " " + n;
-        System.out.println(out + " " + Arrays.toString(result));
+        //System.out.println(out + " " + Arrays.toString(result));
         if (n <= 0) {
             System.out.println(Arrays.toString(result));
             return;

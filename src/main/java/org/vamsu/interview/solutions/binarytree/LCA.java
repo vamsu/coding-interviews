@@ -30,8 +30,8 @@ public class LCA {
         BTreePrinter.printNode(root);
         System.out.println("LCA 1,6: " + lca(root, 1, 6).data);
         System.out.println("LCA 4,1: " + lca(root, 4, 1).data);
-        System.out.println("LCA 4,1: " + lca(root, 6, 5).data);
-        System.out.println("LCA 1,6: " + lca(root, 1, 12).data);
-        System.out.println("LCA 4,1: " + lca(root, 5, 1).data);
+        System.out.println("LCA 4,6: " + lca(root, 4, 6).data);
+        System.out.println("LCA 1,12: " + lca(root, 1, 12).data);
+        System.out.println("LCA 5,1: " + lca(root, 5, 1).data);
     }
 }

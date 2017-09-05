@@ -34,10 +34,10 @@ public class MaxSumRootToLeaf {
 
     public static void main(String[] args) {
         int[] arr1 = {1, 3, 2, 5, 7, 12, 8};
-        Node<Integer> root1 = ArrayToBTree.toTree1(arr1);
-        BTreePrinter.printNode(root1);
-        int sum = maxSum(root1);
+        Node<Integer> root = ArrayToBTree.toTree1(arr1);
+        BTreePrinter.printNode(root);
+        int sum = maxSum(root);
         System.out.println("Max Sum: " + sum);
-        printPath(root1, sum);
+        printPath(root, sum);
     }
 }

@@ -1,5 +1,9 @@
 package org.vamsu.interview.solutions.dp;
 
+import org.vamsu.interview.solutions.utils.PrintUtils;
+
+import java.util.Arrays;
+
 /**
  * Created by vamsu on 8/20/17.
  */
@@ -26,6 +30,7 @@ public class MaxSquareMatrix {
                 }
             }
         }
+        PrintUtils.prettyPrint("Tracker", tracker);
         return maxSoFar;
     }
 

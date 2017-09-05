@@ -63,7 +63,7 @@ public class CompleteBinaryTree {
             populateTracker(root.left, tracker, 2 * i + 1, n);
         }
         if (root.right != null) {
-            populateTracker(root.left, tracker, 2 * i + 2, n);
+            populateTracker(root.right, tracker, 2 * i + 2, n);
         }
     }
 

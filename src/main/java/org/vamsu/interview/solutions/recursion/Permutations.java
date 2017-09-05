@@ -1,6 +1,8 @@
 package org.vamsu.interview.solutions.recursion;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 /**
  * Created by vamsu on 8/21/17.
@@ -56,10 +58,24 @@ public class Permutations {
         return input;
     }
 
+    public static void nonOverlapping(String input, List<String> out) {
+        if (input.length() == 0) {
+            System.out.println(Arrays.toString(out.toArray()));
+            return;
+        }
+        for (int i = 0; i < input.length(); i++) {
+            String substring = input.substring(0, i + 1);
+            out.add(substring);
+            nonOverlapping(input.substring(i + 1), out);
+            out.remove(substring);
+        }
+    }
+
     public static void main(String[] args) {
         //printPermute("abcd");
         //allPermute("abcd".toCharArray(), new char[4], 0);
-        char[] res = {'?', '?', '?', '?'};
-        permute("abcd".toCharArray(), res, 4);
+        //char[] res = {'?', '?', '?', '?'};
+        //permute("abcd".toCharArray(), res, 4);
+        nonOverlapping("abcd", new ArrayList<>());
     }
 }
